@@ -1,51 +1,34 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
-#include "hardware/adc.h"
-#include "hardware/dma.h"
-
-#define SAMPLE_COUNT 1024
-#define SAMPLE_RATE  100000
-
-uint16_t samples[SAMPLE_COUNT];
-
-void capture_samples() {
-    adc_fifo_setup(true, true, 1, false, false);
-    adc_set_clkdiv(48000000.0f / SAMPLE_RATE);
-
-    int dma_chan = dma_claim_unused_channel(true);
-    dma_channel_config cfg = dma_channel_get_default_config(dma_chan);
-    channel_config_set_transfer_data_size(&cfg, DMA_SIZE_16);
-    channel_config_set_read_increment(&cfg, false);
-    channel_config_set_write_increment(&cfg, true);
-    channel_config_set_dreq(&cfg, DREQ_ADC);
-
-    dma_channel_configure(dma_chan, &cfg, samples, &adc_hw->fifo, SAMPLE_COUNT, true);
-
-    adc_run(true);
-    dma_channel_wait_for_finish_blocking(dma_chan);
-    adc_run(false);
-    adc_fifo_drain();
-    dma_channel_unclaim(dma_chan);
-}
+#include "pico/cyw43_arch.h"
+#include "wifi_config.h"
 
 int main() {
     stdio_init_all();
-    sleep_ms(2000);
+    sleep_ms(3000);
 
-    adc_init();
-    adc_gpio_init(26);
-    adc_select_input(0);
+    printf("Starting WiFi test...\n");
 
-    printf("DMA Sampler ready\n");
+    if (cyw43_arch_init()) {
+        printf("WiFi init FAILED\n");
+        return 1;
+    }
+
+    cyw43_arch_enable_sta_mode();
+    printf("Connecting to: %s\n", WIFI_SSID);
+
+    int result = cyw43_arch_wifi_connect_timeout_ms(
+        WIFI_SSID, WIFI_PASSWORD, CYW43_AUTH_WPA2_AES_PSK, 15000
+    );
+
+    if (result) {
+        printf("WiFi FAILED: %d\n", result);
+    } else {
+        printf("WiFi OK! IP: %s\n", ip4addr_ntoa(netif_ip4_addr(netif_default)));
+    }
 
     while (true) {
-        capture_samples();
-
-        for (int i = 0; i < 10; i++) {
-            float v = samples[i] * 3.3f / 4095.0f;
-            printf("sample[%d] = %.3fV\n", i, v);
-        }
-        printf("---\n");
-        sleep_ms(1000);
+        cyw43_arch_poll();
+        sleep_ms(100);
     }
 }
