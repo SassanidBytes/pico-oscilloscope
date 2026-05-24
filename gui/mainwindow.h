@@ -1,29 +1,20 @@
 #pragma once
-
 #include <QMainWindow>
 #include <QSerialPort>
-#include <QTimer>
-#include <QVector>
-
-class QCustomPlot;
+#include <QLineSeries>
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
-
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
 private slots:
     void onDataReceived();
     void onConnectClicked();
-
 private:
     QSerialPort *serial;
-    QTimer *timer;
-    QVector<double> xData, yData;
+    QLineSeries *series;
     QByteArray buffer;
-
     void setupUI();
     void processBuffer();
 };
