@@ -8,7 +8,6 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
 pico_sdk_init()
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 add_executable(pico_oscilloscope
     main.cpp
@@ -18,7 +17,6 @@ target_link_libraries(pico_oscilloscope
     pico_stdlib
     hardware_adc
     hardware_dma
-    pico_cyw43_arch_lwip_poll
 )
 
 pico_enable_stdio_usb(pico_oscilloscope 1)

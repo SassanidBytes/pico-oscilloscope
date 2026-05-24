@@ -1,23 +1,51 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/adc.h"
+#include "hardware/dma.h"
+
+#define SAMPLE_COUNT 1024
+#define SAMPLE_RATE  100000
+
+uint16_t samples[SAMPLE_COUNT];
+
+void capture_samples() {
+    adc_fifo_setup(true, true, 1, false, false);
+    adc_set_clkdiv(48000000.0f / SAMPLE_RATE);
+
+    int dma_chan = dma_claim_unused_channel(true);
+    dma_channel_config cfg = dma_channel_get_default_config(dma_chan);
+    channel_config_set_transfer_data_size(&cfg, DMA_SIZE_16);
+    channel_config_set_read_increment(&cfg, false);
+    channel_config_set_write_increment(&cfg, true);
+    channel_config_set_dreq(&cfg, DREQ_ADC);
+
+    dma_channel_configure(dma_chan, &cfg, samples, &adc_hw->fifo, SAMPLE_COUNT, true);
+
+    adc_run(true);
+    dma_channel_wait_for_finish_blocking(dma_chan);
+    adc_run(false);
+    adc_fifo_drain();
+    dma_channel_unclaim(dma_chan);
+}
 
 int main() {
     stdio_init_all();
     sleep_ms(2000);
 
-    printf("Pico Oscilloscope - ADC ready\n");
-    
     adc_init();
     adc_gpio_init(26);
     adc_select_input(0);
 
-    while (true) {
-        uint16_t raw = adc_read();
-        float voltage = raw * 3.3f / 4095.0f;
-        printf("ADC: %d = %.3fV\n", raw, voltage);
-        sleep_ms(500);
-    }
+    printf("DMA Sampler ready\n");
 
-    return 0;
+    while (true) {
+        capture_samples();
+
+        for (int i = 0; i < 10; i++) {
+            float v = samples[i] * 3.3f / 4095.0f;
+            printf("sample[%d] = %.3fV\n", i, v);
+        }
+        printf("---\n");
+        sleep_ms(1000);
+    }
 }
