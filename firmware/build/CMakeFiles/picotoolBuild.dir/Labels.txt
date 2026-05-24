@@ -1,0 +1,14 @@
+# Target labels
+ picotoolBuild
+# Source files and their labels
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/CMakeFiles/picotoolBuild
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/CMakeFiles/picotoolBuild.rule
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/CMakeFiles/picotoolBuild-complete.rule
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/picotool/src/picotoolBuild-stamp/picotoolBuild-build.rule
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/picotool/src/picotoolBuild-stamp/picotoolBuild-configure.rule
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/picotool/src/picotoolBuild-stamp/picotoolBuild-download.rule
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/picotool/src/picotoolBuild-stamp/picotoolBuild-install.rule
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir.rule
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/picotool/src/picotoolBuild-stamp/picotoolBuild-patch.rule
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/picotool/src/picotoolBuild-stamp/picotoolBuild-test.rule
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/picotool/src/picotoolBuild-stamp/picotoolBuild-update.rule

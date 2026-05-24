@@ -1,0 +1,5 @@
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pioasm-install/pioasm/pioasm.exe
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pioasm-install/pioasm/pioasmTargets.cmake
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pioasm-install/pioasm/pioasmTargets-release.cmake
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pioasm-install/pioasm/pioasmConfig.cmake
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pioasm-install/pioasm/pioasmConfigVersion.cmake

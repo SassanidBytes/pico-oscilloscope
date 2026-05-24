@@ -1,0 +1,7 @@
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/_deps/picotool/picotool.exe
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/_deps/picotool/picotoolTargets.cmake
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/_deps/picotool/picotoolTargets-release.cmake
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/_deps/picotool/picotoolConfig.cmake
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/_deps/picotool/picotoolConfigVersion.cmake
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/_deps/picotool/enc_bootloader.elf
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/_deps/picotool/enc_bootloader_mbedtls.elf

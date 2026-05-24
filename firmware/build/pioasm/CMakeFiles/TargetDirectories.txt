@@ -1,0 +1,7 @@
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pioasm/CMakeFiles/pioasm.dir
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pioasm/CMakeFiles/edit_cache.dir
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pioasm/CMakeFiles/rebuild_cache.dir
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pioasm/CMakeFiles/list_install_components.dir
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pioasm/CMakeFiles/install.dir
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pioasm/CMakeFiles/install/local.dir
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pioasm/CMakeFiles/install/strip.dir

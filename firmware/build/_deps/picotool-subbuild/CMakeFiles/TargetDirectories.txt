@@ -1,0 +1,3 @@
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/_deps/picotool-subbuild/CMakeFiles/picotool-populate.dir
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/_deps/picotool-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/_deps/picotool-subbuild/CMakeFiles/rebuild_cache.dir
