@@ -1,0 +1,7 @@
+build/
+*.uf2
+*.bin
+__pycache__/
+.DS_Store
+.cursor/
+firmware/wifi_config.h
