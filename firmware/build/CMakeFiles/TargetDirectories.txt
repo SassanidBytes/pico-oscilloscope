@@ -1,6 +1,4 @@
 C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/CMakeFiles/pico_oscilloscope.dir
-C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/CMakeFiles/picotoolForceReconfigure.dir
-C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/CMakeFiles/picotoolBuild.dir
 C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/CMakeFiles/edit_cache.dir
 C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/CMakeFiles/rebuild_cache.dir
 C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pico-sdk/CMakeFiles/edit_cache.dir
@@ -160,7 +158,6 @@ C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pico-sdk/src/rp
 C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pico-sdk/src/rp2_common/pico_async_context/CMakeFiles/rebuild_cache.dir
 C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pico-sdk/src/rp2_common/pico_btstack/CMakeFiles/edit_cache.dir
 C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pico-sdk/src/rp2_common/pico_btstack/CMakeFiles/rebuild_cache.dir
-C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir
 C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir
 C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/edit_cache.dir
 C:/Users/david/Downloads/myshit/pico-oscilloscope/firmware/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/rebuild_cache.dir
